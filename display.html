@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>壁纸展示</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>壁纸展示</h1>
+    </header>
+
+    <main>
+        <section class="wallpaper-display">
+            <img id="wallpaperImage" src="" alt="壁纸">
+            <button id="downloadButton" onclick="downloadImage()">下载原图</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>版权所有 &copy; 2025 壁纸搜索下载网站</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const params = new URLSearchParams(window.location.search);
+            const src = params.get('src');
+            if (src) {
+                document.getElementById('wallpaperImage').src = src;
+                document.getElementById('downloadButton').addEventListener('click', () => {
+                    downloadImage(src);
+                });
+            } else {
+                alert('无效的图片链接');
+                window.history.back();
+            }
+        });
+
+        function downloadImage(url) {
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'wallpaper.jpg';
+            a.click();
+        }
+    </script>
+</body>
+</html>
