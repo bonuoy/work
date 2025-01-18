@@ -11,6 +11,27 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
+    position: relative;
+}
+
+header nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+header nav .nav-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header nav .nav-button:hover {
+    background-color: #0056b3;
 }
 
 main {

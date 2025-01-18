@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日壁纸随机生成</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>每日壁纸随机生成</h1>
+        <nav>
+            <a href="index.html" class="nav-button">返回主页</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="wallpaper-section">
+            <form id="wallpaperForm">
+                <input type="radio" id="fengjing" name="wallpaperType" value="fengjing" checked>
+                <label for="fengjing">每日风景壁纸</label><br>
+                <input type="radio" id="dongman" name="wallpaperType" value="dongman">
+                <label for="dongman">二次元壁纸</label><br>
+            </form>
+            <button onclick="generateRandomWallpaper()">生成壁纸</button>
+            <div id="wallpaperResult">
+                <img id="wallpaperImage" src="" alt="随机壁纸" style="display: none;">
+                <button id="downloadButton" onclick="downloadImage()" style="display: none;">下载壁纸</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>版权所有 &copy; 2025 每日壁纸随机生成</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const wallpaperImage = document.getElementById('wallpaperImage');
+            const downloadButton = document.getElementById('downloadButton');
+            const wallpaperResult = document.getElementById('wallpaperResult');
+
+            function generateRandomWallpaper() {
+                const form = document.getElementById('wallpaperForm');
+                const selectedType = form.wallpaperType.value;
+
