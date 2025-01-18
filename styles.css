@@ -38,21 +38,24 @@ main {
     padding: 20px;
 }
 
-.search-section {
+.wallpaper-section {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.search-section input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    background-color: #fff;
+.wallpaper-section form {
+    margin-bottom: 10px;
 }
 
-.search-section button {
+.wallpaper-section input[type="radio"] {
+    margin: 5px;
+}
+
+.wallpaper-section label {
+    margin: 5px;
+}
+
+.wallpaper-section button {
     background-color: #007BFF;
     color: #fff;
     border: none;
@@ -62,35 +65,16 @@ main {
     margin: 5px;
 }
 
-.search-section button:hover {
+.wallpaper-section button:hover {
     background-color: #0056b3;
 }
 
-.wallpapers-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.wallpapers-section img {
-    width: 200px;
-    height: 200px;
+.wallpaper-section img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
     border-radius: 5px;
-    cursor: pointer;
-    transition: box-shadow 0.3s;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.wallpapers-section img:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.wallpapers-section .no-results {
-    text-align: center;
-    margin: 20px;
-    font-size: 18px;
-    color: #555;
+    margin-top: 20px;
 }
 
 footer {
@@ -104,7 +88,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .search-section input[type="text"] {
-        width: 90%;
+    .wallpaper-section button {
+        width: 100%;
     }
 }

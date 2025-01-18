@@ -22,7 +22,7 @@
                 <input type="radio" id="dongman" name="wallpaperType" value="dongman">
                 <label for="dongman">二次元壁纸</label><br>
             </form>
-            <button onclick="generateRandomWallpaper()">生成壁纸</button>
+            <button id="generateButton">生成壁纸</button>
             <div id="wallpaperResult">
                 <img id="wallpaperImage" src="" alt="随机壁纸" style="display: none;">
                 <button id="downloadButton" onclick="downloadImage()" style="display: none;">下载壁纸</button>
@@ -34,13 +34,6 @@
         <p>版权所有 &copy; 2025 每日壁纸随机生成</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const wallpaperImage = document.getElementById('wallpaperImage');
-            const downloadButton = document.getElementById('downloadButton');
-            const wallpaperResult = document.getElementById('wallpaperResult');
-
-            function generateRandomWallpaper() {
-                const form = document.getElementById('wallpaperForm');
-                const selectedType = form.wallpaperType.value;
-
+    <script src="daily-scripts.js"></script>
+</body>
+</html>
